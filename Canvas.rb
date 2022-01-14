@@ -26,9 +26,11 @@ class Canvas
         end
         }
         p.call 
-        if (text.length % 2 == 0) && (text.length > minho)
-            puts "\n#Bot: Your inputted text's length excceeded 43 and it was also even"
-        elsif (text.length == 0)
+    end
+    def describe
+        if (@text.length % 2 == 0) && (@text.length > minho)
+            puts "\n#Bot: Your inputted text's length excceeded #{minho} and it was also even"
+        elsif (@text.length == 0)
             puts "\n#Bot: Your inputted text's length is 0"
         end
         puts "\n#Note: Current version of Canvas in Console \n       is now compatible with text/string of \n       any length but only for strings made\n       of alphabets"
