@@ -8,7 +8,7 @@ It can definitely be more fun, interesting and better than any graphical interfa
 ### Demo :
 
 ```ruby
-C = Canvas.new "Hi I'm Canvas In Console"
+C = Canvas.new "Hi, I'm Canvas In Console"
 #It will generate a (compile-time/static) canvas in your terminal
 ```
 #### Output :
