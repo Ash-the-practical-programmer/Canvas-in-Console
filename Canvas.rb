@@ -39,4 +39,3 @@ class Canvas
   end
 end
 
-#Import this file , create an instance of Canvas and make use of its helpful methods .
