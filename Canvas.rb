@@ -4,7 +4,7 @@ class Canvas
   def initialize(text="Hi, I'm Canvas in Console",minho=43)
     @text = text
     @minho = minho
-    puts "#Prsenting Canvas in Console in Ruby"
+    $Decorators.sample.call "#Presenting Canvas in Console in Ruby"
     p = lambda{ puts "–"+"—"*minho+"–" }
     p.call 
     space_1,space_2 = 0,0
