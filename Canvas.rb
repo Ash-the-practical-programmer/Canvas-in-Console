@@ -6,19 +6,18 @@ class Canvas
     puts "#Prsenting Canvas in Console in Ruby"
     p = lambda{ puts "–"+"—"*minho+"–" }
     p.call 
-    len = text.length
     space_1,space_2 = 0,0
     temp = text.scan(/.{0,#{minho-1}}[a-z.!?,;](?:\b|$)/mi)
     20.times {
-      unless _1 == (20 - temp.length)/2
+      unless _1 == (20 - temp.size)/2
         puts "–" +" "*minho+"–"
       else
         for i in temp
           if i.size.even?
-            space_1 = (minho-i.length)/2
-            space_2 = 43 - i.length - space_1
+            space_1 = (minho-i.size)/2
+            space_2 = 43 - i.size - space_1
           else
-            space_1 = (minho-i.length)/2
+            space_1 = (minho-i.size)/2
             space_2 = space_1
           end
           puts "–"+(" "*space_1+i+" "*space_2).center(minho)+"–"
