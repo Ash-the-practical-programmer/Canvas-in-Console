@@ -11,3 +11,5 @@ It can definitely be more fun, interesting and better than any graphical interfa
 C = Canvas.new "Hi I'm Canvas In Console"
 #It will generate a (compile-time/static) canvas in your terminal
 ```
+#### Output :
+<img src="https://www.dropbox.com/s/slseejual8zj5x8/IMG_20221225_090533.jpg?raw=1"/>
