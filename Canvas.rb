@@ -1,3 +1,4 @@
+require_relative "/decorators.rb"
 class Canvas
   attr_accessor :text, :minho
   def initialize(text="Hi, I'm Canvas in Console",minho=43)
