@@ -2,27 +2,21 @@ require_relative "/decorators.rb"
 class Canvas
   attr_accessor :text, :minho
   def initialize text="Hi, I'm Canvas in Console",minho=43
-    @text = text
-    @minho = minho
+    @text,@minho = text,minho
     $Decorators.sample.call "#Presenting Canvas in Console in Ruby"
     p = lambda{ puts "–"+"—"*minho+"–" }
     p.call 
-    space_1 = ((minho-text.size)/2).abs
+    space_1 = (minho-text.size).abs / 2
     space_2 = space_1 + (text.size.odd? ? 0 : 1)
     temp = text.scan(/.{0,#{minho-1}}[a-z.!?,;](?:\b|$)/mi)
-    20.times {|time|
-      unless time == (20 - temp.size)/2
+    20.times {
+      unless _1 == (20 - temp.size)/2
         puts "–" +" "*minho+"–"
       else
-        for i in temp
-          if i.size.even?
-            space_1 = (minho-i.size)/2
-            space_2 = 43 - i.size - space_1
-          else
-            space_1 = (minho-i.size)/2
-            space_2 = space_1
-          end
-          puts "–"+(" "*space_1+i+" "*space_2).center(minho)+"–"
+        temp.each do |_|
+          space_1 = (minho-_.size)/2
+          space_2 = _.size.odd? ? space_1 : 43 - _.size - space_1
+          puts "–"+(" "*space_1+_+" "*space_2).center(minho)+"–"
         end
       end
     }
