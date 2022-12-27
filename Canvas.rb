@@ -41,5 +41,8 @@ class Canvas
     puts put_3[0]
     (put_3.size-1).times { puts " "*10+put_3[_1+1] }
   end
+  def draw
+    @h = {sword:nil,welcome:nil,cheers:nil,figure:{}}
+  end
 end
 
